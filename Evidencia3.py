@@ -166,17 +166,16 @@ class Alumnos_GUI(QMainWindow):
             vcheck='0'
 
         return vcheck
-      
-                
+
     #Generacion de Funcion Consultar
     def fn_consultar(self):
-       self.edt_nombre.setText('Funcion Consultar')         
+        self.edt_nombre.setText('Funcion Consultar')
 
     #Generacion de Funcion Leer de CSV
     def fn_leer_csv(self):
         #self.edt_apppat.setText('Funcion Leer desde CSV')
         index=0
-        with open(r'C:\Proyectos\Python\UI\alumnos2.csv', newline='') as File:  
+        with open(r'alumnos3.csv', newline='') as File:  
             reader = csv.reader(File)
             for row in reader:
                 #print(row)
@@ -185,7 +184,7 @@ class Alumnos_GUI(QMainWindow):
                 if index>0:  
                     rowPosition = self.Tabla_Datos.rowCount()
                     self.Tabla_Datos.insertRow(rowPosition)   
-        
+
                     #Campo Matricula
                     newItem = QTableWidgetItem(row[0])
                     self.Tabla_Datos.setItem(rowPosition, 0, newItem); 

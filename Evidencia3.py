@@ -7,7 +7,7 @@ class Alumnos_GUI(QMainWindow):
     
     def __init__(self):
         super().__init__()
-        uic.loadUi(r"C:\Proyectos\Python\UI\Alumnos.ui", self)
+        uic.loadUi(r"Alumnos.ui", self)
         self.fn_init_UI()
 
     #Generacion de Funcion Init_UI
